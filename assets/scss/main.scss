@@ -161,16 +161,22 @@ header {
             flex-direction: column;
             gap: 20px;
 
-            a {
-                font-size: 14px;
-                font-weight: 500;
-                text-decoration: none;
-                color: #121127B8;
+            li {
+                width: 100%;
 
-                padding: 10px 20px;
-                border-radius: 12px;
-                background-color: #f5f5f5;
+                a {
+                    display: block;
+                    font-size: 14px;
+                    font-weight: 500;
+                    text-decoration: none;
+                    color: #121127B8;
+
+                    padding: 10px 20px;
+                    border-radius: 12px;
+                    background-color: #f5f5f5;
+                }
             }
+
         }
 
         .login {
@@ -214,6 +220,8 @@ header {
     visibility: hidden;
     pointer-events: none;
     transition: opacity 0.3s ease, visibility 0.3s ease;
+    border: none;
+    padding: 0;
 
     &.is-visible {
         opacity: 1;
@@ -257,6 +265,7 @@ header {
             @include media(862) {
                 width: 390px;
             }
+
             @include media(580) {
                 width: 85%;
             }
@@ -281,6 +290,7 @@ header {
                 width: 390px;
                 margin-bottom: 20px;
             }
+
             @include media(580) {
                 width: 85%;
             }
@@ -308,6 +318,7 @@ header {
                 width: 390px;
                 margin-bottom: 20px;
             }
+
             @include media(580) {
                 width: 85%;
             }
@@ -328,6 +339,7 @@ header {
             @include media(862) {
                 width: 390px;
             }
+
             @include media(580) {
                 width: 85%;
             }
@@ -1569,51 +1581,59 @@ footer {
                 }
             }
 
-            >ul {
-                display: flex;
-                padding-right: 110px;
-                padding-left: 0;
+            nav {
                 width: 66%;
-                justify-content: space-between;
 
                 @include media(982) {
                     width: 100%;
-                    padding-right: 0;
-                    flex-wrap: wrap;
-                    gap: 40px;
                 }
 
-                @include media(430) {
-                    justify-content: flex-start;
-                }
-
-                li {
+                >ul {
                     display: flex;
-                    flex-direction: column;
-                    gap: 20px;
+                    padding-right: 110px;
+                    padding-left: 0;
 
-                    h5 {
-                        font-weight: 600;
-                        font-size: 14px;
-                        text-transform: uppercase;
-                        color: #12112766;
+                    justify-content: space-between;
+
+                    @include media(982) {
+                        width: 100%;
+                        padding-right: 0;
+                        flex-wrap: wrap;
+                        gap: 40px;
                     }
 
-                    ul {
+                    @include media(430) {
+                        justify-content: flex-start;
+                    }
+
+                    li {
                         display: flex;
                         flex-direction: column;
-                        gap: 8px;
-                        padding-left: 0;
+                        gap: 20px;
 
-                        li a {
-                            font-weight: 400;
+                        h5 {
+                            font-weight: 600;
                             font-size: 14px;
-                            color: #121127;
-                            text-decoration: none;
+                            text-transform: uppercase;
+                            color: #12112766;
+                        }
+
+                        ul {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 8px;
+                            padding-left: 0;
+
+                            li a {
+                                font-weight: 400;
+                                font-size: 14px;
+                                color: #121127;
+                                text-decoration: none;
+                            }
                         }
                     }
-                }
 
+                }
             }
         }
 
